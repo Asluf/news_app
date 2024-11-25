@@ -1,0 +1,81 @@
+# Flutter specific
+.flutter/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.idea/
+.vscode/
+build/
+# iOS specific
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/ServiceDefinitions.json
+ios/Runner/GeneratedPluginRegistrant.*
+ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-*.png
+ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage-*.png
+ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json
+ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/ephemeral/
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/ephemeral/
+# Android specific
+android/.gradle/
+android/app/build/
+android/local.properties
+android/.idea/
+android/.vscode/
+android/key.properties
+android/app/key.properties
+android/app/google-services.json
+android/app/src/debug/
+android/app/src/profile/
+android/app/src/release/
+# Web specific
+web/.dart_tool/
+web/.packages
+web/build/
+# Linux specific
+linux/flutter/ephemeral/
+# macOS specific
+macos/Flutter/ephemeral/
+# Windows specific
+windows/flutter/ephemeral/
+# Generated files
+*.log
+*.lock
+*.pyc
+*.swp
+*.class
+*.jar
+*.war
+*.ear
+*.db
+*.iml
+*.ipr
+*.iws
+*.bak
+*.tmp
+*.swp
+*.swo
+*.DS_Store
+*.log
+*.lock
+*.pyc
+*.swp
+*.class
+*.jar
+*.war
+*.ear
+*.db
+*.iml
+*.ipr
+*.iws
+*.bak
+*.tmp
+*.swp
+*.swo
+*.DS_Store
