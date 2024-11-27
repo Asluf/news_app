@@ -5,6 +5,7 @@
 .packages
 .idea/
 .vscode/
+.dart_tool/
 build/
 # iOS specific
 ios/Flutter/App.framework

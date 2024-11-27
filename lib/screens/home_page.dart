@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/components/news_tab.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -43,11 +44,11 @@ class HomePage extends StatelessWidget {
             const Expanded(
               child: TabBarView(
                 children: [
-                  Center(child: Text('Headlines')),
-                  Center(child: Text('Sports')),
-                  Center(child: Text('Technology')),
-                  Center(child: Text('Health')),
-                  Center(child: Text('Entertainment')),
+                  NewsTab(category: 'headlines'),
+                  NewsTab(category: 'sports'),
+                  NewsTab(category: 'technology'),
+                  NewsTab(category: 'health'),
+                  NewsTab(category: 'entertainment'),
                 ],
               ),
             ),
