@@ -35,4 +35,18 @@ class NewsService {
       throw Exception('Failed to load news');
     }
   }
+
+  Future<List<NewsArticle>> searchNews({String searchQuery = ''}) async {
+    http.Response response;
+    response = await http.get(
+      Uri.parse('$baseUrl/everything?q=$searchQuery&apiKey=$apiKey'),
+    );
+    if (response.statusCode == 200) {
+      final Map<String, dynamic> data = json.decode(response.body);
+      final List<dynamic> articles = data['articles'];
+      return articles.map((json) => NewsArticle.fromJson(json)).toList();
+    } else {
+      throw Exception('Failed to load news');
+    }
+  }
 }
