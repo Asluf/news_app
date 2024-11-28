@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
             Container(
               margin: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: Theme.of(context).primaryColor,
+                color: Theme.of(context).secondaryHeaderColor,
                 borderRadius: BorderRadius.circular(15),
               ),
               child: const TabBar(

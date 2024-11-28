@@ -3,7 +3,7 @@ import 'package:news_app/screens/home_page.dart';
 import 'package:news_app/screens/search_screen.dart';
 import 'package:news_app/screens/saved_screen.dart';
 import 'package:news_app/screens/category_selection_screen.dart';
-import 'package:news_app/screens/theme_change.dart';
+import 'package:news_app/screens/setting.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -22,14 +22,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
     const SearchScreen(),
     const SavedScreen(),
     const CategorySelectionScreen(),
-    const ThemeChange(),
+    const Setting(),
   ];
   final List<String> _titles = [
     'Home',
     'Search',
     'Saved',
     'Categories',
-    'Themes'
+    'Setting'
   ];
 
   void _onItemTapped(int index) {
@@ -89,7 +89,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               onTap: () => _onItemTapped(3),
             ),
             ListTile(
-              title: const Text('Themes'),
+              title: const Text('Setting'),
               onTap: () => _onItemTapped(4),
             ),
           ],

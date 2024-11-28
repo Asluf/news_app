@@ -46,6 +46,10 @@ http_parser
 2.12
 file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2/
 file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2/lib/
+intl
+3.0
+file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.19.0/
+file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.19.0/lib/
 leak_tracker
 3.2
 file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.5/
@@ -158,6 +162,10 @@ test_api
 3.2
 file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.2/
 file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.2/lib/
+timeago
+2.12
+file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/timeago-3.7.0/
+file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/timeago-3.7.0/lib/
 typed_data
 3.5
 file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.4.0/
@@ -196,6 +204,6 @@ file:///C:/flutter/packages/flutter_web_plugins/
 file:///C:/flutter/packages/flutter_web_plugins/lib/
 news_app
 3.5
-file:///D:/_Projects/Flutter/news_app/
-file:///D:/_Projects/Flutter/news_app/lib/
+file:///D:/_Projects/news_app/
+file:///D:/_Projects/news_app/lib/
 2

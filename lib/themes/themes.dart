@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 ThemeData oceanBreezeTheme = ThemeData(
   primaryColor: const Color(0xFF008CBA),
   colorScheme: ColorScheme.fromSwatch().copyWith(
-    secondary: const Color(0xFF00D1B2), // Replaces accentColor
+    secondary: const Color.fromARGB(255, 71, 180, 216), // Replaces accentColor
   ),
   scaffoldBackgroundColor: const Color(0xFFF0F4F8),
   cardColor: Colors.white,
@@ -20,7 +20,7 @@ ThemeData darkModeTheme = ThemeData(
   brightness: Brightness.dark,
   primaryColor: const Color(0xFF212121),
   colorScheme: ColorScheme.fromSwatch(brightness: Brightness.dark).copyWith(
-    secondary: const Color(0xFFBB86FC),
+    secondary: const Color.fromARGB(255, 135, 57, 231),
   ),
   scaffoldBackgroundColor: const Color(0xFF121212),
   cardColor: const Color(0xFF1E1E1E),

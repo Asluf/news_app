@@ -1,13 +1,20 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:news_app/models/news_model.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class NewsService {
   final String apiKey = 'd6110a04e36249cebde211d9240582eb';
   final String baseUrl = 'https://newsapi.org/v2';
 
+  Future<String> _getSelectedCountry() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString('selectedCountry') ?? 'us';
+  }
+
   Future<List<NewsArticle>> fetchNews(
       {String country = 'us', String type = ''}) async {
+    final country = await _getSelectedCountry();
     http.Response response;
 
     if (type == 'headlines') {
