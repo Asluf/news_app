@@ -20,7 +20,7 @@ ThemeData darkModeTheme = ThemeData(
   brightness: Brightness.dark,
   primaryColor: const Color(0xFF212121),
   colorScheme: ColorScheme.fromSwatch(brightness: Brightness.dark).copyWith(
-    secondary: const Color.fromARGB(255, 135, 57, 231),
+    secondary: const Color.fromARGB(255, 62, 85, 203),
   ),
   scaffoldBackgroundColor: const Color(0xFF121212),
   cardColor: const Color(0xFF1E1E1E),
@@ -69,7 +69,7 @@ ThemeData forestGreenTheme = ThemeData(
 ThemeData sunnyCitrusTheme = ThemeData(
   primaryColor: const Color(0xFFFFA726),
   colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.orange).copyWith(
-    secondary: const Color(0xFFFFEB3B), // Replaces accentColor
+    secondary: const Color(0xFFCDBD07), // Replaces accentColor
   ),
   scaffoldBackgroundColor: const Color(0xFFFFF8E1),
   cardColor: Colors.white,
