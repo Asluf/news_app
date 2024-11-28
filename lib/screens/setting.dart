@@ -24,7 +24,6 @@ class _SettingState extends State<Setting> {
     setState(() {
       _selectedCountry = prefs.getString('selectedCountry') ?? 'us';
     });
-
   }
 
   @override

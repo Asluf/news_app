@@ -59,7 +59,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
           padding: EdgeInsets.zero,
           children: <Widget>[
             SizedBox(
-              height: 85,
+              height: 70,
               child: DrawerHeader(
                 decoration: BoxDecoration(
                   color: Theme.of(context).colorScheme.secondary,

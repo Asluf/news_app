@@ -1,5 +1,4 @@
 class NewsArticle {
-  final Source source;
   final String title;
   final String description;
   final String url;
@@ -8,7 +7,6 @@ class NewsArticle {
   final String? content;
 
   NewsArticle({
-    required this.source,
     required this.title,
     required this.description,
     required this.url,
@@ -19,30 +17,12 @@ class NewsArticle {
 
   factory NewsArticle.fromJson(Map<String, dynamic> json) {
     return NewsArticle(
-      source: Source.fromJson(json['source']),
       title: json['title'],
       description: json['description'] ?? '',
       url: json['url'],
       urlToImage: json['urlToImage'] ?? '',
       publishedAt: json['publishedAt'],
       content: json['content'],
-    );
-  }
-}
-
-class Source {
-  final String id;
-  final String name;
-
-  Source({
-    required this.id,
-    required this.name,
-  });
-
-  factory Source.fromJson(Map<String, dynamic> json) {
-    return Source(
-      id: json['id'] ?? '',
-      name: json['name'],
     );
   }
 }
