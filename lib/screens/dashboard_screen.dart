@@ -4,6 +4,7 @@ import 'package:news_app/screens/search_screen.dart';
 import 'package:news_app/screens/saved_screen.dart';
 import 'package:news_app/screens/category_selection_screen.dart';
 import 'package:news_app/screens/setting.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -40,6 +41,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
     Navigator.pop(context);
   }
 
+  Future<void> _launchUrl(Uri _url) async {
+    if (!await launchUrl(_url)) {
+      throw Exception('Could not launch $_url');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,39 +65,52 @@ class _DashboardScreenState extends State<DashboardScreen> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            SizedBox(
-              height: 85,
-              child: DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.secondary,
-                ),
-                child: const Text(
-                  'News',
-                  style: TextStyle(
-                    fontSize: 24,
+            Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 90,
+                  width: double.infinity,
+                  child: DrawerHeader(
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.secondary,
+                    ),
+                    child: const Text(
+                      'My News',
+                      style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.white
+                      ),
+                    ),
                   ),
                 ),
-              ),
+                ListTile(
+                  title: const Text('Home'),
+                  onTap: () => _onItemTapped(0),
+                ),
+                ListTile(
+                  title: const Text('Search'),
+                  onTap: () => _onItemTapped(1),
+                ),
+                ListTile(
+                  title: const Text('Saved'),
+                  onTap: () => _onItemTapped(2),
+                ),
+                ListTile(
+                  title: const Text('Categories'),
+                  onTap: () => _onItemTapped(3),
+                ),
+                ListTile(
+                  title: const Text('Setting'),
+                  onTap: () => _onItemTapped(4),
+                ),
+              ],
             ),
-            ListTile(
-              title: const Text('Home'),
-              onTap: () => _onItemTapped(0),
-            ),
-            ListTile(
-              title: const Text('Search'),
-              onTap: () => _onItemTapped(1),
-            ),
-            ListTile(
-              title: const Text('Saved'),
-              onTap: () => _onItemTapped(2),
-            ),
-            ListTile(
-              title: const Text('Categories'),
-              onTap: () => _onItemTapped(3),
-            ),
-            ListTile(
-              title: const Text('Setting'),
-              onTap: () => _onItemTapped(4),
+            TextButton(
+              onPressed: () async {
+                final url = Uri.parse('https://asluf-ahamed.vercel.app/');
+                await _launchUrl(url);
+              },
+              child: const Text('By: Asluf Ahamed'),
             ),
           ],
         ),
