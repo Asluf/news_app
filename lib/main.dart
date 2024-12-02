@@ -3,8 +3,11 @@ import 'package:news_app/screens/dashboard_screen.dart';
 import 'package:news_app/themes/themes.dart';
 import 'package:news_app/providers/theme_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:sqflite/sqflite.dart';
+import 'package:path/path.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 

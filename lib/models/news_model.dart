@@ -28,6 +28,31 @@ class NewsArticle {
       content: json['content'],
     );
   }
+  
+  Map<String, dynamic> toMap() {
+    return {
+      'sourceId': source.id,
+      'sourceName': source.name,
+      'title': title,
+      'description': description,
+      'url': url,
+      'urlToImage': urlToImage,
+      'publishedAt': publishedAt,
+      'content': content,
+    };
+  }
+
+  static NewsArticle fromMap(Map<String, dynamic> map) {
+    return NewsArticle(
+      source: Source(id: map['sourceId'], name: map['sourceName']),
+      title: map['title'],
+      description: map['description'],
+      url: map['url'],
+      urlToImage: map['urlToImage'],
+      publishedAt: map['publishedAt'],
+      content: map['content'],
+    );
+  }
 }
 
 class Source {

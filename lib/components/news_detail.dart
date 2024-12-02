@@ -13,9 +13,9 @@ class NewsDetail extends StatelessWidget {
     final DateTime publishedDate = DateTime.parse(article.publishedAt);
     final String formattedDate = timeago.format(publishedDate);
 
-    Future<void> _launchUrl(Uri _url) async {
-      if (!await launchUrl(_url)) {
-        throw Exception('Could not launch $_url');
+    Future<void> launchUrlExternal(Uri url) async {
+      if (!await launchUrl(url)) {
+        throw Exception('Could not launch $url');
       }
     }
 
@@ -30,7 +30,7 @@ class NewsDetail extends StatelessWidget {
           children: [
             if (article.urlToImage.isNotEmpty)
               Container(
-                height: 200,
+                height: 250,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -70,8 +70,16 @@ class NewsDetail extends StatelessWidget {
               ),
             const SizedBox(height: 10),
             Text(
+              article.title,
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 10),
+            Text(
               'Published by ${article.source.name}',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
               ),
@@ -79,14 +87,14 @@ class NewsDetail extends StatelessWidget {
             const SizedBox(height: 10),
             Text(
               formattedDate,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.grey,
               ),
             ),
             const SizedBox(height: 10),
             Text(
               article.description,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
               ),
             ),
@@ -97,9 +105,9 @@ class NewsDetail extends StatelessWidget {
               onPressed: () async {
                 final urlString = article.url;
                 final url = Uri.parse(urlString);
-                await _launchUrl(url);
+                await launchUrlExternal(url);
               },
-              child: Text('See more info'),
+              child: const Text('See more info'),
             ),
           ],
         ),
